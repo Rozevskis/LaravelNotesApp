@@ -10,9 +10,11 @@
                     <div class="card-body">
                         <div class= "card-title">
                         Show note {{ $note->id }}
+                        Created at {{$note->created_at}}
                         </div>
 
                         <div class="mb-3">
+                            
                            <label for="" class="form-label"></label>
                            {{ $note->note }}
                         </div>
@@ -20,14 +22,12 @@
                     </div>
                     <div class="note-buttons">
 
-                        <a href=" " 
-                        class="btn btn-dark"
-                        >aahhh
+                        <a href="{{ route('note.edit', $note)}}" class="btn btn-dark"
+                        >Edit
                         </a>
                         
-                        <a href="{{ route('note.index')}}"
-                        class="btn btn-danger"
-                        >Cancel
+                        <a href="{{ route('note.index')}}" class="btn btn-danger"
+                        >Back
                         </a>
                         
                     </div>

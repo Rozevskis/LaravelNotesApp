@@ -12,8 +12,8 @@
                         <div class= "card-text">
                         {{ $note->note }}
                         </div>
-                    </div>
-                    <div class="note-buttons">
+                        
+                        <div class="note-buttons hover">
 
                         <a href="{{ route('note.show', $note)}}" 
                         class="btn btn-dark">
@@ -25,6 +25,7 @@
                         </a>    
                         <a class="btn btn-danger">Delete</a>
                         
+                        </div>
                     </div>
                 </div>
 
