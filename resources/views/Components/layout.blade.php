@@ -39,6 +39,7 @@
             </div>
             @endsession
             
+            
            {{ $slot }}
         </main>
 

@@ -13,18 +13,25 @@
                         {{ $note->note }}
                         </div>
                         
-                        <div class="note-buttons hover">
+                        <div class="note-buttons hover ">
+                            <div class="d-flex gap-2">
 
-                        <a href="{{ route('note.show', $note)}}" 
-                        class="btn btn-dark">
-                        View
-                        </a>
-                        <a href="{{ route('note.edit', $note)}}" 
-                        class="btn btn-dark">
-                        Edit
-                        </a>    
-                        <a class="btn btn-danger">Delete</a>
-                        
+                                <a href="{{ route('note.show', $note)}}" 
+                                    class="btn btn-dark">
+                                    View
+                                </a>
+                                <a href="{{ route('note.edit', $note)}}" 
+                                    class="btn btn-dark">
+                                    Edit
+                                </a>    
+
+                                <form action="{{ route('note.destroy', $note) }}" method="POST"> 
+                                    @csrf
+                                    @method('DELETE')
+                                    <button href="" class="btn btn-danger">Delete</button>
+                                </form>
+
+                            </div>   
                         </div>
                     </div>
                 </div>

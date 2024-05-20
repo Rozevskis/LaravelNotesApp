@@ -20,7 +20,7 @@
                         </div>
                         
                     </div>
-                    <div class="note-buttons">
+                    <div class="note-buttons d-flex gap-2">
 
                         <a href="{{ route('note.edit', $note)}}" class="btn btn-dark"
                         >Edit
@@ -29,6 +29,11 @@
                         <a href="{{ route('note.index')}}" class="btn btn-danger"
                         >Back
                         </a>
+                       <form action="{{ route('note.destroy', $note) }}" method="POST"> 
+                            @csrf
+                            @method('DELETE')
+                           <button href="" class="btn btn-danger">Delete</button>
+                        </form>
                         
                     </div>
                 </div>
