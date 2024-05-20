@@ -10,7 +10,15 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <style>
 
+        .note-buttons{ display: none; /* Hide buttons by default */}
+        .card-body:hover .note-buttons {
+            display: block; /* Show buttons on hover */
+            position: relative; /* Optional: For better positioning */
+            bottom: 10px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */}
+        </style>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -19,8 +27,13 @@
             @include('layouts.navigation')
 
             <!-- Page Heading -->
+            @if (session('message'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative m-4" role="alert">
+                    {{ session('message') }}
+                </div>
+            @endif
             @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
+                <header class="bg-white dark:bg-gray-800 shadow ">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
