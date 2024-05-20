@@ -3,10 +3,9 @@
         <div class="notes flex flex-wrap">
             <div class="bg-gray-100 p-4 m-2 rounded shadow-lg" style="width: 40rem; height: 20rem;">
                 <div class="card-body">
-                    <div class="card-title mb-4">
-                        <h2>Show note {{ $note->id }}</h2>
-                        <p>Created at {{ $note->created_at }}</p>
-                    </div>
+                     <div class="card-title text-xl font-semibold mb-4">
+                            Created at: {{ $note->created_at }}
+                        </div>
 
                     <div class="mb-3">
                         <label for="" class="form-label"></label>

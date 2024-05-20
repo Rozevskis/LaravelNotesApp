@@ -12,12 +12,12 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <style>
 
-        .note-buttons{ display: none; /* Hide buttons by default */}
-        .card-body:hover .note-buttons {
+       
+        .hover{ display: none; /* Hide buttons by default */}
+        .card-body:hover .hover {
             display: block; /* Show buttons on hover */
             position: relative; /* Optional: For better positioning */
-            bottom: 10px; /* Adjust as needed */
-            right: 10px; /* Adjust as needed */}
+           }
         </style>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])

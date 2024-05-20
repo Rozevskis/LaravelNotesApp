@@ -8,8 +8,8 @@
 
                 <div class="bg-gray-100 p-4 m-2 rounded shadow-lg" style="width: 40rem; min-height: 20rem;">
                     <div class="card-body">
-                        <div class="card-title text-xl font-semibold mb-4">
-                            Edit note {{ $note->id }}
+                         <div class="card-title text-xl font-semibold mb-4">
+                            Created at: {{ $note->created_at }}
                         </div>
 
                         <div class="mb-3">
