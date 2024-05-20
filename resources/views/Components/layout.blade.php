@@ -15,16 +15,17 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
         crossorigin="anonymous">
         <style>
+
         .hover{ display: none; /* Hide buttons by default */}
         .card-body:hover .hover {
             display: block; /* Show buttons on hover */
             position: absolute; /* Optional: For better positioning */
             bottom: 10px; /* Adjust as needed */
             right: 10px; /* Adjust as needed */}
-    
-        
         </style>
        
+       @vite(['resources/css/app.css',
+                'resources/js/app.js'])
     </head>
 
     <body class="bg-light">
